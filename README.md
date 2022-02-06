@@ -62,7 +62,7 @@ git clone https://github.com/google/googletest.git
 cd benchmark
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release ../
+cmake -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_DOWNLOAD_DEPENDENCIES=ON ../
 make
 sudo make install
 
