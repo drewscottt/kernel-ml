@@ -92,6 +92,8 @@ KML requires Linux kernel modifications to function. We recommend allocating at 
     ```bash
     cp /boot/config-$(uname -r) .config
     make menuconfig
+    sudo apt install gcc-8
+    sudo ln -fs gcc-8 /usr/bin/gcc
     make -j$(nproc)
     sudo make modules_install -j$(nproc)
     sudo make install -j$(nproc)
