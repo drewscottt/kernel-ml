@@ -95,6 +95,7 @@ KML requires Linux kernel modifications to function. We recommend allocating at 
     sudo apt install gcc-8
     sudo ln -fs gcc-8 /usr/bin/gcc
     cp -r ../include/kernel-interaces include/
+    scripts/config --disable SYSTEM_TRUSTED_KEYS
     make -j$(nproc)
     sudo make modules_install -j$(nproc)
     sudo make install -j$(nproc)
